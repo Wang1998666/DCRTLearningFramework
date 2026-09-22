@@ -1,0 +1,13 @@
+numpy
+pandas
+pyarrow
+scipy
+scikit-learn
+statsmodels
+matplotlib
+joblib
+orjson
+torch
+xgboost
+geopandas
+shapely

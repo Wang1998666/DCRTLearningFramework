@@ -1,0 +1,27 @@
+# Withheld raw/licensed data — never commit these
+01_数据_input/
+02_数据_output/refuel_panel_v2/
+02_数据_output/ml_bunkering_v1/*legs*.parquet
+02_数据_output/ml_bunkering_v1/*candidates_v8.parquet
+02_数据_output/ml_bunkering_v1/*features_v9.parquet
+02_数据_output/ml_bunkering_v1/*predictions_v9.parquet
+02_数据_output/ml_bunkering_v1/hormuz_network_event_comparison_v8.parquet
+
+# Local/tool data that must not leak into the repo
+tmp/
+.zcodeignore
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Python packaging / environment
+.venv/
+venv/
+*.egg-info/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
