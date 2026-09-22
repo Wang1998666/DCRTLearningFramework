@@ -1,0 +1,183 @@
+{
+  "question": "does early Red Sea port-choice experience improve 2026 Hormuz port ranking?",
+  "candidate_rule": "identical v8 AIS sea-route rule; reachable, <=1350 nm extra, closest 40, no truth injection",
+  "early_redsea_source_events": 14805,
+  "early_redsea_eligible_events": 14260,
+  "early_redsea_recalled_events": 14043,
+  "late_redsea_source_events": 13002,
+  "late_redsea_eligible_events": 12456,
+  "selected_epochs_on_redsea_late_only": 1,
+  "tuning": [
+    {
+      "fine_tune_epochs": 0,
+      "validation_nll": 1.2196190330924386,
+      "model": "redsea_epoch_0",
+      "events": 12456,
+      "candidate_recall": 0.9852280025690431,
+      "top1_end_to_end": 0.6404945407835582,
+      "top3_end_to_end": 0.8926621708413616,
+      "top5_end_to_end": 0.9377007064868337,
+      "mrr_end_to_end": 0.7685239315868314,
+      "conditional_top1": 0.6500977835723598,
+      "conditional_top5": 0.9517601043024772,
+      "habit_change_events": 9359,
+      "change_precision": 0.8873196659073652,
+      "change_recall": 0.940901771336554,
+      "change_f1": 0.913325517780383
+    },
+    {
+      "fine_tune_epochs": 1,
+      "validation_nll": 1.2101984953440177,
+      "model": "redsea_epoch_1",
+      "events": 12456,
+      "candidate_recall": 0.9852280025690431,
+      "top1_end_to_end": 0.6428227360308285,
+      "top3_end_to_end": 0.8881663455362877,
+      "top5_end_to_end": 0.9367373153500321,
+      "mrr_end_to_end": 0.7697640000870848,
+      "conditional_top1": 0.652460886571056,
+      "conditional_top5": 0.9507822685788787,
+      "habit_change_events": 9359,
+      "change_precision": 0.8871974425331101,
+      "change_recall": 0.9384863123993559,
+      "change_f1": 0.9121214492526801
+    },
+    {
+      "fine_tune_epochs": 3,
+      "validation_nll": 1.2106021039792632,
+      "model": "redsea_epoch_3",
+      "events": 12456,
+      "candidate_recall": 0.9852280025690431,
+      "top1_end_to_end": 0.6429833012202955,
+      "top3_end_to_end": 0.8891297366730893,
+      "top5_end_to_end": 0.9366570327552987,
+      "mrr_end_to_end": 0.7699794136700077,
+      "conditional_top1": 0.6526238591916558,
+      "conditional_top5": 0.9507007822685789,
+      "habit_change_events": 9359,
+      "change_precision": 0.8871802679658952,
+      "change_recall": 0.9383252818035427,
+      "change_f1": 0.912036312411958
+    },
+    {
+      "fine_tune_epochs": 5,
+      "validation_nll": 1.2111504849994932,
+      "model": "redsea_epoch_5",
+      "events": 12456,
+      "candidate_recall": 0.9852280025690431,
+      "top1_end_to_end": 0.642903018625562,
+      "top3_end_to_end": 0.8890494540783558,
+      "top5_end_to_end": 0.9366570327552987,
+      "mrr_end_to_end": 0.7698663559220753,
+      "conditional_top1": 0.652542372881356,
+      "conditional_top5": 0.9507007822685789,
+      "habit_change_events": 9359,
+      "change_precision": 0.8871974425331101,
+      "change_recall": 0.9384863123993559,
+      "change_f1": 0.9121214492526801
+    }
+  ],
+  "metrics": [
+    {
+      "split": "redsea_late",
+      "model": "normal_v8",
+      "events": 12456,
+      "candidate_recall": 0.9852280025690431,
+      "top1_end_to_end": 0.6404945407835582,
+      "top3_end_to_end": 0.8926621708413616,
+      "top5_end_to_end": 0.9377007064868337,
+      "mrr_end_to_end": 0.7685239315868314,
+      "conditional_top1": 0.6500977835723598,
+      "conditional_top5": 0.9517601043024772,
+      "habit_change_events": 9359,
+      "change_precision": 0.8873196659073652,
+      "change_recall": 0.940901771336554,
+      "change_f1": 0.913325517780383
+    },
+    {
+      "split": "redsea_late",
+      "model": "redsea_adapted_v9",
+      "events": 12456,
+      "candidate_recall": 0.9852280025690431,
+      "top1_end_to_end": 0.6428227360308285,
+      "top3_end_to_end": 0.8881663455362877,
+      "top5_end_to_end": 0.9367373153500321,
+      "mrr_end_to_end": 0.7697640000870848,
+      "conditional_top1": 0.652460886571056,
+      "conditional_top5": 0.9507822685788787,
+      "habit_change_events": 9359,
+      "change_precision": 0.8871974425331101,
+      "change_recall": 0.9384863123993559,
+      "change_f1": 0.9121214492526801
+    },
+    {
+      "split": "hormuz_post",
+      "model": "normal_v8",
+      "events": 23296,
+      "candidate_recall": 0.9843320741758241,
+      "top1_end_to_end": 0.6266311813186813,
+      "top3_end_to_end": 0.8483430631868132,
+      "top5_end_to_end": 0.9312757554945055,
+      "mrr_end_to_end": 0.7536799794980792,
+      "conditional_top1": 0.636605468579652,
+      "conditional_top5": 0.9460991670664166,
+      "habit_change_events": 14960,
+      "change_precision": 0.9344010904753791,
+      "change_recall": 0.9468232044198895,
+      "change_f1": 0.9405711345510677
+    },
+    {
+      "split": "hormuz_post",
+      "model": "redsea_adapted_v9",
+      "events": 23296,
+      "candidate_recall": 0.9843320741758241,
+      "top1_end_to_end": 0.6279618818681318,
+      "top3_end_to_end": 0.8472269917582418,
+      "top5_end_to_end": 0.9318337912087912,
+      "mrr_end_to_end": 0.7536081480826496,
+      "conditional_top1": 0.637957350311805,
+      "conditional_top5": 0.9466660852121582,
+      "habit_change_events": 14960,
+      "change_precision": 0.934734324278148,
+      "change_recall": 0.944578729281768,
+      "change_f1": 0.9396307428080721
+    }
+  ],
+  "paired_vessel_bootstrap": {
+    "redsea_late": {
+      "top1": {
+        "difference": 0.0023281952472703916,
+        "p025": 0.0003220048043876175,
+        "p975": 0.004440936770658921
+      },
+      "top5": {
+        "difference": -0.0009633911368015414,
+        "p025": -0.0023404178064166787,
+        "p975": 0.0006389304313536771
+      },
+      "mrr": {
+        "difference": 0.0012400685002532709,
+        "p025": 0.0001030813525790521,
+        "p975": 0.0024240710806719035
+      }
+    },
+    "hormuz_post": {
+      "top1": {
+        "difference": 0.0013307005494505495,
+        "p025": -4.308808121689427e-05,
+        "p975": 0.002720472599511226
+      },
+      "top5": {
+        "difference": 0.0005580357142857143,
+        "p025": -0.00030156296559508854,
+        "p975": 0.0014451769883078495
+      },
+      "mrr": {
+        "difference": -7.183141542957542e-05,
+        "p025": -0.0008928173645636034,
+        "p975": 0.000687838642104381
+      }
+    }
+  },
+  "hormuz_labels_used_for_training_or_selection": false
+}

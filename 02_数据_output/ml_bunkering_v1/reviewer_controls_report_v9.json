@@ -1,0 +1,347 @@
+{
+  "control_metrics": [
+    {
+      "frame": "sealane",
+      "model": "sealane_shortest",
+      "events": 23296,
+      "candidate_recall": 0.9843320741758241,
+      "top1_end_to_end": 0.3833276098901099,
+      "top3_end_to_end": 0.7586710164835165,
+      "top5_end_to_end": 0.8271806318681318,
+      "mrr_end_to_end": 0.5847224352357681,
+      "conditional_top1": 0.38942915703632636,
+      "conditional_top5": 0.8403471283415463,
+      "habit_change_events": 14960,
+      "change_precision": 0.8515144613983148,
+      "change_recall": 0.9683183701657458,
+      "change_f1": 0.9061679524982833
+    },
+    {
+      "frame": "sealane",
+      "model": "sealane_dcrank",
+      "events": 23296,
+      "candidate_recall": 0.9843320741758241,
+      "top1_end_to_end": 0.6266311813186813,
+      "top3_end_to_end": 0.8483430631868132,
+      "top5_end_to_end": 0.9312757554945055,
+      "mrr_end_to_end": 0.7536799794980792,
+      "conditional_top1": 0.636605468579652,
+      "conditional_top5": 0.9460991670664166,
+      "habit_change_events": 14960,
+      "change_precision": 0.9344010904753791,
+      "change_recall": 0.9468232044198895,
+      "change_f1": 0.9405711345510677
+    },
+    {
+      "frame": "greatcircle",
+      "model": "greatcircle_shortest",
+      "events": 23296,
+      "candidate_recall": 0.9882383241758241,
+      "top1_end_to_end": 0.4377146291208791,
+      "top3_end_to_end": 0.7427455357142857,
+      "top5_end_to_end": 0.8222441620879121,
+      "mrr_end_to_end": 0.6173176287071991,
+      "conditional_top1": 0.44292415949960906,
+      "conditional_top5": 0.8320302319520458,
+      "habit_change_events": 14960,
+      "change_precision": 0.8739717522893062,
+      "change_recall": 0.9722030386740331,
+      "change_f1": 0.9204740498569677
+    },
+    {
+      "frame": "greatcircle",
+      "model": "greatcircle_dcrank",
+      "events": 23296,
+      "candidate_recall": 0.9882383241758241,
+      "top1_end_to_end": 0.6380065247252747,
+      "top3_end_to_end": 0.8877918956043956,
+      "top5_end_to_end": 0.9459563873626373,
+      "mrr_end_to_end": 0.7693358237561401,
+      "conditional_top1": 0.6455998610025193,
+      "conditional_top5": 0.9572148379810616,
+      "habit_change_events": 14960,
+      "change_precision": 0.9392571136479809,
+      "change_recall": 0.9517437845303868,
+      "change_f1": 0.9454592230511963
+    },
+    {
+      "frame": "oracle",
+      "model": "oracle_shortest",
+      "events": 23296,
+      "candidate_recall": 1.0,
+      "top1_end_to_end": 0.3833276098901099,
+      "top3_end_to_end": 0.7586710164835165,
+      "top5_end_to_end": 0.8272235576923077,
+      "mrr_end_to_end": 0.5851632295174882,
+      "conditional_top1": 0.3833276098901099,
+      "conditional_top5": 0.8272235576923077,
+      "habit_change_events": 14960,
+      "change_precision": 0.8515144613983148,
+      "change_recall": 0.9683183701657458,
+      "change_f1": 0.9061679524982833
+    },
+    {
+      "frame": "oracle",
+      "model": "oracle_dcrank",
+      "events": 23296,
+      "candidate_recall": 1.0,
+      "top1_end_to_end": 0.6266311813186813,
+      "top3_end_to_end": 0.8483430631868132,
+      "top5_end_to_end": 0.9313186813186813,
+      "mrr_end_to_end": 0.7546321218409919,
+      "conditional_top1": 0.6266311813186813,
+      "conditional_top5": 0.9313186813186813,
+      "habit_change_events": 14960,
+      "change_precision": 0.9344010904753791,
+      "change_recall": 0.9468232044198895,
+      "change_f1": 0.9405711345510677
+    }
+  ],
+  "paired_vessel_bootstrap": {
+    "gc_dcrank_vs_sealane_dcrank": {
+      "top1": {
+        "difference": 0.011375343406593406,
+        "p025": 0.004024041610996863,
+        "p975": 0.018359477620834515
+      },
+      "top5": {
+        "difference": 0.014680631868131868,
+        "p025": 0.01048941776418039,
+        "p975": 0.01863630056483832
+      },
+      "mrr": {
+        "difference": 0.015655844258060807,
+        "p025": 0.011331116416211392,
+        "p975": 0.020271631535551525
+      }
+    },
+    "gc_dcrank_vs_gc_shortest": {
+      "top1": {
+        "difference": 0.20029189560439561,
+        "p025": 0.19037351732308433,
+        "p975": 0.2101598019808278
+      },
+      "top5": {
+        "difference": 0.12371222527472528,
+        "p025": 0.1162607675649745,
+        "p975": 0.1308120380526016
+      },
+      "mrr": {
+        "difference": 0.1520181950489409,
+        "p025": 0.1462300189326466,
+        "p975": 0.157803657372043
+      }
+    },
+    "oracle_dcrank_vs_sealane_dcrank": {
+      "top1": {
+        "difference": 0.0,
+        "p025": 0.0,
+        "p975": 0.0
+      },
+      "top5": {
+        "difference": 4.292582417582418e-05,
+        "p025": 0.0,
+        "p975": 0.00013070087913139507
+      },
+      "mrr": {
+        "difference": 0.0009521423429126101,
+        "p025": 0.0007955507131620833,
+        "p975": 0.001123155626703801
+      }
+    },
+    "gc_shortest_vs_sealane_shortest": {
+      "top1": {
+        "difference": 0.05438701923076923,
+        "p025": 0.045321225849294954,
+        "p975": 0.06366126519494002
+      },
+      "top5": {
+        "difference": -0.00493646978021978,
+        "p025": -0.011926363636456164,
+        "p975": 0.0022110271132250716
+      },
+      "mrr": {
+        "difference": 0.032595193471431035,
+        "p025": 0.02688548119141524,
+        "p975": 0.03822240559204548
+      }
+    }
+  },
+  "injected_rank_distribution": {
+    "5.0": 1,
+    "7.0": 1,
+    "9.0": 1,
+    "12.0": 1,
+    "13.0": 16,
+    "14.0": 118,
+    "15.0": 61,
+    "16.0": 60,
+    "17.0": 21,
+    "18.0": 5,
+    "19.0": 6,
+    "22.0": 4,
+    "23.0": 1,
+    "25.0": 3,
+    "27.0": 6,
+    "28.0": 18,
+    "29.0": 10,
+    "37.0": 1,
+    "40.0": 1,
+    "41.0": 30
+  },
+  "injected_failure_events": 365,
+  "injected_rank_le1": 0,
+  "injected_rank_le5": 1,
+  "injected_rank_mean": 18.56986301369863,
+  "reproduction_checks": {
+    "top1_end_to_end": true,
+    "top5_end_to_end": true,
+    "mrr_end_to_end": true,
+    "candidate_recall": true
+  },
+  "source_events": 23981,
+  "eligible_events": 23948,
+  "budget_knm": 0.19445101328451075,
+  "coldstart": [
+    {
+      "subset": "all",
+      "rows": 245912,
+      "refuel_rate": 0.09145954650444062,
+      "model": "normal_frozen",
+      "roc_auc": 0.8446645899228822,
+      "pr_auc": 0.38347388698644524,
+      "log_loss": 0.24558507651814962
+    },
+    {
+      "subset": "all",
+      "rows": 245912,
+      "refuel_rate": 0.09145954650444062,
+      "model": "hormuz_pre_updated",
+      "roc_auc": 0.8804182967833165,
+      "pr_auc": 0.4546097074037282,
+      "log_loss": 0.22300593567087823
+    },
+    {
+      "subset": "all",
+      "rows": 245912,
+      "refuel_rate": 0.09145954650444062,
+      "model": "redsea_plus_hormuz_pre",
+      "roc_auc": 0.8828855839415171,
+      "pr_auc": 0.46517741339462504,
+      "log_loss": 0.21591026234332195
+    },
+    {
+      "subset": "od_seen",
+      "rows": 229231,
+      "refuel_rate": 0.09239151772666,
+      "model": "normal_frozen",
+      "roc_auc": 0.8549306797015457,
+      "pr_auc": 0.40010230543896186,
+      "log_loss": 0.24280598616915566
+    },
+    {
+      "subset": "od_seen",
+      "rows": 229231,
+      "refuel_rate": 0.09239151772666,
+      "model": "hormuz_pre_updated",
+      "roc_auc": 0.885865381520975,
+      "pr_auc": 0.4650439476258809,
+      "log_loss": 0.2228313892861636
+    },
+    {
+      "subset": "od_seen",
+      "rows": 229231,
+      "refuel_rate": 0.09239151772666,
+      "model": "redsea_plus_hormuz_pre",
+      "roc_auc": 0.887729576856604,
+      "pr_auc": 0.47492298461367555,
+      "log_loss": 0.21552695775298233
+    },
+    {
+      "subset": "od_unseen",
+      "rows": 16681,
+      "refuel_rate": 0.0786523589712847,
+      "model": "normal_frozen",
+      "roc_auc": 0.6632015031842686,
+      "pr_auc": 0.1148996106833043,
+      "log_loss": 0.28377545238232066
+    },
+    {
+      "subset": "od_unseen",
+      "rows": 16681,
+      "refuel_rate": 0.0786523589712847,
+      "model": "hormuz_pre_updated",
+      "roc_auc": 0.8125007438952977,
+      "pr_auc": 0.28718189456873205,
+      "log_loss": 0.22540455939334747
+    },
+    {
+      "subset": "od_unseen",
+      "rows": 16681,
+      "refuel_rate": 0.0786523589712847,
+      "model": "redsea_plus_hormuz_pre",
+      "roc_auc": 0.8190056371393793,
+      "pr_auc": 0.3026214276949169,
+      "log_loss": 0.22117765006277262
+    },
+    {
+      "subset": "vessel_known",
+      "rows": 175920,
+      "refuel_rate": 0.0856412005457026,
+      "model": "normal_frozen",
+      "roc_auc": 0.8646399121619855,
+      "pr_auc": 0.4016189188130648,
+      "log_loss": 0.22785584369201253
+    },
+    {
+      "subset": "vessel_known",
+      "rows": 175920,
+      "refuel_rate": 0.0856412005457026,
+      "model": "hormuz_pre_updated",
+      "roc_auc": 0.8914679536349222,
+      "pr_auc": 0.46099268158787543,
+      "log_loss": 0.20746689291247009
+    },
+    {
+      "subset": "vessel_known",
+      "rows": 175920,
+      "refuel_rate": 0.0856412005457026,
+      "model": "redsea_plus_hormuz_pre",
+      "roc_auc": 0.8933535685922742,
+      "pr_auc": 0.47192906786635913,
+      "log_loss": 0.20114427752415132
+    },
+    {
+      "subset": "vessel_new",
+      "rows": 69992,
+      "refuel_rate": 0.10608355240598925,
+      "model": "normal_frozen",
+      "roc_auc": 0.7921297718340887,
+      "pr_auc": 0.34715485039625926,
+      "log_loss": 0.29014626406492694
+    },
+    {
+      "subset": "vessel_new",
+      "rows": 69992,
+      "refuel_rate": 0.10608355240598925,
+      "model": "hormuz_pre_updated",
+      "roc_auc": 0.852251429968757,
+      "pr_auc": 0.4451260622389383,
+      "log_loss": 0.2620622335629111
+    },
+    {
+      "subset": "vessel_new",
+      "rows": 69992,
+      "refuel_rate": 0.10608355240598925,
+      "model": "redsea_plus_hormuz_pre",
+      "roc_auc": 0.8562592397246448,
+      "pr_auc": 0.45178904761814503,
+      "log_loss": 0.2530235331369627
+    }
+  ],
+  "protocol": {
+    "greatcircle": "great-circle detour replaces sea-lane detour in retrieval and scoring; trained utility and calibrated budget unchanged",
+    "oracle": "realized port appended to the top-40 sea-lane candidate set when retrieval missed it",
+    "coldstart": "occurrence accuracy split by OD-pair and vessel visibility in 2021-2022 training data"
+  }
+}

@@ -1,0 +1,24 @@
+﻿check,pass,detail
+required_artifacts_present,True,[]
+sea_route_distance_declared,True,(shortest origin-candidate-destination sea-network path minus shortest origin-destination sea-network path) / 1.852; nautical miles
+ais_network_provenance_recorded,True,"{'source': 'TRE-10CHOKE observed AIS corridor network; baseline.parquet for training/validation and HORMUZ_STRAIT scenario for the 2026 test', 'nodes': 984}"
+candidate_source_has_no_truth_injection,True,candidate list is distance-sorted reachable network nodes only
+saved_candidates_have_route_distances,True,route fields present
+zero_distance_barrier_violations,True,0
+container_candidate_recall_above_95pct,True,0.9843320741758241
+crude_candidate_recall_above_85pct,True,0.9270955165692008
+training_core_lags_complete,True,"{'lag4_calls': 0.0, 'lag4_refuels': 0.0, 'lag4_refuel_share': 0.0, 'lag4_berth_h': 0.03917198470110693}"
+global_beats_shortest_top1,True,"{'difference': 0.24330357142857142, 'p025': 0.23193883136005405, 'p975': 0.2540838993856655}"
+global_beats_shortest_top5,True,"{'difference': 0.10409512362637363, 'p025': 0.09739455171716767, 'p975': 0.11083713090937225}"
+top1_tie_with_fixed50_is_preserved,True,"{'difference': 0.0007726648351648351, 'p025': -0.0014405908856944415, 'p975': 0.003159840269347069}"
+dynamic_no_gain_is_preserved,True,"{'difference': 0.0, 'p025': 0.0, 'p975': 0.0}"
+rolling_frozen_difference_not_significant,True,"{'difference': -0.0006009615384615385, 'p025': -0.004237477794361559, 'p975': 0.0032308920283367665}"
+five_seed_stability,True,0.00022180650210788927
+within_event_shuffle_fails,True,"{'shuffle_p975': 0.22881932520604395, 'observed': 0.6266311813186813}"
+crude_transfer_beats_shortest,True,"{'difference': 0.26354775828460036, 'p025': 0.2414850941514922, 'p975': 0.2839148140553857}"
+budget_curve_is_computed_for_both_splits,True,"{'splits': ['hormuz_test_descriptive', 'validation'], 'budgets': 41}"
+figure_reads_saved_curve,True,no hard-coded sensitivity array
+dynamic_budget_collapse_recorded,True,"{'count': 23296.0, 'mean': 193.90403418239404, 'std': 1.4523603037891177, 'min': 189.74484565303396, '25%': 193.34470762185416, '50%': 194.24425194582446, '75%': 194.9131850112768, 'max': 196.24870379846385}"
+sample_sizes_match_report,True,"{'container': 23296, 'crude': 2565}"
+network_scenarios_use_same_event_cohort,True,"{'all_events / hormuz_blocked_network': 23296, 'all_events / normal_network': 23296, 'historically_hormuz_exposed / hormuz_blocked_network': 863, 'historically_hormuz_exposed / normal_network': 863}"
+route_shock_changes_computed_distances,True,"{'candidate_detour_changed_share': 7.991807719815349e-05, 'direct_route_changed_share': 0.00017170329670329672}"

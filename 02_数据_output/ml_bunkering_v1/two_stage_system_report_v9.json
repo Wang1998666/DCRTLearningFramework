@@ -1,0 +1,62 @@
+{
+  "system": "P(no refuel)=1-P(refuel); P(port j)=P(refuel)*P(port j|refuel)",
+  "stage1_primary": "redsea_plus_hormuz_pre is the pre-specified transfer model; hormuz_pre_updated is retained as the no-transfer comparator",
+  "stage2_primary": "normal_v8 remains the pre-specified main ranker; Red Sea fine-tuning is evaluated once as a challenger",
+  "threshold_rule": "maximum F1 on the pre-Hormuz window only",
+  "metrics": [
+    {
+      "stage1_model": "hormuz_pre_updated",
+      "pre_hormuz_threshold": 0.24688588996002037,
+      "pre_hormuz_threshold_f1": 0.5577603001659572,
+      "voyages": 245912,
+      "refuel_events": 22491,
+      "positive_port_link_rate": 0.9756791605531101,
+      "positive_port_recall_rate_all_positives": 0.9636743586323419,
+      "occurrence_sensitivity": 0.4480903472500111,
+      "occurrence_specificity": 0.945645216877554,
+      "system_positive_top1": 0.3400915921924325,
+      "system_positive_top5": 0.42772664621404116,
+      "all_voyage_exact_top1_action_accuracy": 0.8902615569797326,
+      "all_voyage_exact_top5_action_accuracy": 0.898276619278441,
+      "balanced_top1_action_accuracy": 0.6428684045349933,
+      "balanced_top5_action_accuracy": 0.6866859315457976,
+      "joint_no_refuel_or_actual_port_nll": 0.41879544858587675
+    },
+    {
+      "stage1_model": "redsea_plus_hormuz_pre",
+      "pre_hormuz_threshold": 0.25928390776563653,
+      "pre_hormuz_threshold_f1": 0.5251321766326607,
+      "voyages": 245912,
+      "refuel_events": 22491,
+      "positive_port_link_rate": 0.9756791605531101,
+      "positive_port_recall_rate_all_positives": 0.9636743586323419,
+      "occurrence_sensitivity": 0.46174025165621807,
+      "occurrence_specificity": 0.9449022249475206,
+      "system_positive_top1": 0.34845049130763417,
+      "system_positive_top5": 0.4407540794095416,
+      "all_voyage_exact_top1_action_accuracy": 0.8903510198770291,
+      "all_voyage_exact_top5_action_accuracy": 0.8987930641855623,
+      "balanced_top1_action_accuracy": 0.6466763581275774,
+      "balanced_top5_action_accuracy": 0.6928281521785311,
+      "joint_no_refuel_or_actual_port_nll": 0.41221871922439673
+    }
+  ],
+  "stage2_hormuz_transfer_bootstrap": {
+    "top1": {
+      "difference": 0.0013307005494505495,
+      "p025": -4.308808121689427e-05,
+      "p975": 0.002720472599511226
+    },
+    "top5": {
+      "difference": 0.0005580357142857143,
+      "p025": -0.00030156296559508854,
+      "p975": 0.0014451769883078495
+    },
+    "mrr": {
+      "difference": -7.183141542957542e-05,
+      "p025": -0.0008928173645636034,
+      "p975": 0.000687838642104381
+    }
+  },
+  "warning": "all-voyage action accuracy is dominated by non-refuelling voyages; balanced accuracy and positive-event Top-k are reported"
+}

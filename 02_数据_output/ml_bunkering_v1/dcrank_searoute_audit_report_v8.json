@@ -1,0 +1,183 @@
+{
+  "status": "PASS",
+  "passed": 23,
+  "total": 23,
+  "checks": [
+    {
+      "check": "required_artifacts_present",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "sea_route_distance_declared",
+      "pass": true,
+      "detail": "(shortest origin-candidate-destination sea-network path minus shortest origin-destination sea-network path) / 1.852; nautical miles"
+    },
+    {
+      "check": "ais_network_provenance_recorded",
+      "pass": true,
+      "detail": {
+        "source": "TRE-10CHOKE observed AIS corridor network; baseline.parquet for training/validation and HORMUZ_STRAIT scenario for the 2026 test",
+        "nodes": 984
+      }
+    },
+    {
+      "check": "candidate_source_has_no_truth_injection",
+      "pass": true,
+      "detail": "candidate list is distance-sorted reachable network nodes only"
+    },
+    {
+      "check": "saved_candidates_have_route_distances",
+      "pass": true,
+      "detail": "route fields present"
+    },
+    {
+      "check": "zero_distance_barrier_violations",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "container_candidate_recall_above_95pct",
+      "pass": true,
+      "detail": 0.9843320741758241
+    },
+    {
+      "check": "crude_candidate_recall_above_85pct",
+      "pass": true,
+      "detail": 0.9270955165692008
+    },
+    {
+      "check": "training_core_lags_complete",
+      "pass": true,
+      "detail": {
+        "lag4_calls": 0.0,
+        "lag4_refuels": 0.0,
+        "lag4_refuel_share": 0.0,
+        "lag4_berth_h": 0.03917198470110693
+      }
+    },
+    {
+      "check": "global_beats_shortest_top1",
+      "pass": true,
+      "detail": {
+        "difference": 0.24330357142857142,
+        "p025": 0.23193883136005405,
+        "p975": 0.2540838993856655
+      }
+    },
+    {
+      "check": "global_beats_shortest_top5",
+      "pass": true,
+      "detail": {
+        "difference": 0.10409512362637363,
+        "p025": 0.09739455171716767,
+        "p975": 0.11083713090937225
+      }
+    },
+    {
+      "check": "top1_tie_with_fixed50_is_preserved",
+      "pass": true,
+      "detail": {
+        "difference": 0.0007726648351648351,
+        "p025": -0.0014405908856944415,
+        "p975": 0.003159840269347069
+      }
+    },
+    {
+      "check": "dynamic_no_gain_is_preserved",
+      "pass": true,
+      "detail": {
+        "difference": 0.0,
+        "p025": 0.0,
+        "p975": 0.0
+      }
+    },
+    {
+      "check": "rolling_frozen_difference_not_significant",
+      "pass": true,
+      "detail": {
+        "difference": -0.0006009615384615385,
+        "p025": -0.004237477794361559,
+        "p975": 0.0032308920283367665
+      }
+    },
+    {
+      "check": "five_seed_stability",
+      "pass": true,
+      "detail": 0.00022180650210788927
+    },
+    {
+      "check": "within_event_shuffle_fails",
+      "pass": true,
+      "detail": {
+        "shuffle_p975": 0.22881932520604395,
+        "observed": 0.6266311813186813
+      }
+    },
+    {
+      "check": "crude_transfer_beats_shortest",
+      "pass": true,
+      "detail": {
+        "difference": 0.26354775828460036,
+        "p025": 0.2414850941514922,
+        "p975": 0.2839148140553857
+      }
+    },
+    {
+      "check": "budget_curve_is_computed_for_both_splits",
+      "pass": true,
+      "detail": {
+        "splits": [
+          "hormuz_test_descriptive",
+          "validation"
+        ],
+        "budgets": 41
+      }
+    },
+    {
+      "check": "figure_reads_saved_curve",
+      "pass": true,
+      "detail": "no hard-coded sensitivity array"
+    },
+    {
+      "check": "dynamic_budget_collapse_recorded",
+      "pass": true,
+      "detail": {
+        "count": 23296.0,
+        "mean": 193.90403418239404,
+        "std": 1.4523603037891177,
+        "min": 189.74484565303396,
+        "25%": 193.34470762185416,
+        "50%": 194.24425194582446,
+        "75%": 194.9131850112768,
+        "max": 196.24870379846385
+      }
+    },
+    {
+      "check": "sample_sizes_match_report",
+      "pass": true,
+      "detail": {
+        "container": 23296,
+        "crude": 2565
+      }
+    },
+    {
+      "check": "network_scenarios_use_same_event_cohort",
+      "pass": true,
+      "detail": {
+        "all_events / hormuz_blocked_network": 23296,
+        "all_events / normal_network": 23296,
+        "historically_hormuz_exposed / hormuz_blocked_network": 863,
+        "historically_hormuz_exposed / normal_network": 863
+      }
+    },
+    {
+      "check": "route_shock_changes_computed_distances",
+      "pass": true,
+      "detail": {
+        "candidate_detour_changed_share": 7.991807719815349e-05,
+        "direct_route_changed_share": 0.00017170329670329672
+      }
+    }
+  ]
+}

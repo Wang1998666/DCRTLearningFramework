@@ -1,0 +1,106 @@
+{
+  "stage": "probability that a voyage refuels",
+  "input_rows": 2458146,
+  "features": [
+    "prior_y",
+    "prior3_rate",
+    "prior10_rate",
+    "days_since_refuel",
+    "nm_since_refuel",
+    "origin_rate",
+    "dest_rate",
+    "od_rate",
+    "vessel_rate",
+    "operator_rate",
+    "month_sin",
+    "month_cos",
+    "teu",
+    "power_kw_total",
+    "ship_age",
+    "isFullLoad",
+    "cargoLoad",
+    "berthDuration",
+    "averageSpeed"
+  ],
+  "normal_training_rows": 300000,
+  "redsea_early_rows": 120000,
+  "redsea_late_rows": 171927,
+  "hormuz_pre_rows": 61365,
+  "hormuz_post_rows": 245912,
+  "time_rule": "no post-Hormuz label is used for fitting or calibration",
+  "metrics": [
+    {
+      "model": "normal_frozen",
+      "split": "hormuz_post",
+      "rows": 245912,
+      "refuel_events": 22491,
+      "refuel_rate": 0.09145954650444062,
+      "roc_auc": 0.8446645899228822,
+      "pr_auc": 0.38347388698644524,
+      "log_loss": 0.24558507651814962,
+      "brier": 0.07034147045709085
+    },
+    {
+      "model": "hormuz_pre_updated",
+      "split": "hormuz_post",
+      "rows": 245912,
+      "refuel_events": 22491,
+      "refuel_rate": 0.09145954650444062,
+      "roc_auc": 0.8804182967833165,
+      "pr_auc": 0.4546097074037282,
+      "log_loss": 0.22300593567087823,
+      "brier": 0.06471497125740235
+    },
+    {
+      "model": "redsea_plus_hormuz_pre",
+      "split": "hormuz_post",
+      "rows": 245912,
+      "refuel_events": 22491,
+      "refuel_rate": 0.09145954650444062,
+      "roc_auc": 0.8828855839415171,
+      "pr_auc": 0.46517741339462504,
+      "log_loss": 0.21591026234332195,
+      "brier": 0.06351157859721762
+    },
+    {
+      "model": "normal_frozen",
+      "split": "redsea_late",
+      "rows": 171927,
+      "refuel_events": 12989,
+      "refuel_rate": 0.075549506476586,
+      "roc_auc": 0.8991351609220978,
+      "pr_auc": 0.4555683319180779,
+      "log_loss": 0.18008680775983066,
+      "brier": 0.05308383512140127
+    },
+    {
+      "model": "redsea_early_updated",
+      "split": "redsea_late",
+      "rows": 171927,
+      "refuel_events": 12989,
+      "refuel_rate": 0.075549506476586,
+      "roc_auc": 0.917913495870801,
+      "pr_auc": 0.512543316589924,
+      "log_loss": 0.1647548038574738,
+      "brier": 0.04934318911076595
+    }
+  ],
+  "incremental_redsea_transfer_on_hormuz": {
+    "roc_auc": {
+      "difference": 0.002468936313063097,
+      "p025": 0.001795177192971753,
+      "p975": 0.0031643574903087277
+    },
+    "pr_auc": {
+      "difference": 0.01052011909752484,
+      "p025": 0.008461608221307237,
+      "p975": 0.012598896995959214
+    },
+    "log_loss": {
+      "difference": -0.007067590690818237,
+      "p025": -0.007635118727152307,
+      "p975": -0.006508751057314513
+    }
+  },
+  "interpretation": "compare redsea_plus_hormuz_pre with hormuz_pre_updated; the only extra labelled period is early Red Sea"
+}

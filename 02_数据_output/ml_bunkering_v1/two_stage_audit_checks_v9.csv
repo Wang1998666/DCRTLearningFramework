@@ -1,0 +1,11 @@
+﻿check,pass,detail
+all_v9_artifacts_present,True,[]
+no_post_hormuz_labels_in_stage1,True,no post-Hormuz label is used for fitting or calibration
+no_post_hormuz_labels_in_stage2,True,False
+redsea_improves_occurrence_pr_auc,True,"{'difference': 0.01052011909752484, 'p025': 0.008461608221307237, 'p975': 0.012598896995959214}"
+redsea_improves_occurrence_log_loss,True,"{'difference': -0.007067590690818237, 'p025': -0.007635118727152307, 'p975': -0.006508751057314513}"
+port_transfer_null_result_preserved,True,"{'difference': 0.0013307005494505495, 'p025': -4.308808121689427e-05, 'p975': 0.002720472599511226}"
+two_stage_link_rate_above_95pct,True,"{'hormuz_pre_updated': 0.97567916055311, 'redsea_plus_hormuz_pre': 0.97567916055311}"
+redsea_transfer_improves_joint_nll,True,"{'hormuz_pre_updated': 0.4187954485858767, 'redsea_plus_hormuz_pre': 0.4122187192243967}"
+redsea_transfer_improves_linked_top5,True,"{'hormuz_pre_updated': 0.4277266462140411, 'redsea_plus_hormuz_pre': 0.4407540794095416}"
+stage2_v8_audit_passes,True,PASS
